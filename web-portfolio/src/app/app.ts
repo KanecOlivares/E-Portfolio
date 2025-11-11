@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
-import { HeaderComponent } from "./header.component";
+import { ProfilePicture } from './profile-picture/profile-picture';
+import { HeaderComponent } from "./header/header.component";
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, ProfilePicture],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
