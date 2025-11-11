@@ -1,0 +1,10 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+  background-image: url('/bg03.jpg');
+  background-size: cover;        /* fills the screen */
+  background-repeat: no-repeat;  /* avoids repeating tiles */
+  background-position: center;   /* centers image */
+  background-attachment: fixed;  /* stays fixed while scrolling */
+  color: white;                  /* optional: better text contrast */
+}
