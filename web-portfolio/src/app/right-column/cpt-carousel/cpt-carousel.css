@@ -19,17 +19,37 @@
     display: none;
 }
 
+.carousel img {
+    /* border-radius: 30px; */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    filter: contrast(1.05) brightness(1.05);
+}
+
 .group{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: spin 10s infinite linear;
+    animation: spin 35s infinite linear;
+}
+
+.cpt-court-img{
+    flex: 0 0 10em;
+    /* width: 33%; */
+    height: 100%;
+}
+
+.cpt-dales-img{
+    flex: 0 0 10em;
+    /* width: 60%; */
+    height: 100%;
 }
 
 .card{
-    flex: 0 0 5em;
-    height: 5em;
+    flex: 0 0 10em;
+    height: 10em;
     /* padding: 1em; */
     background-color: cornflowerblue;
     font-size: 3rem;
