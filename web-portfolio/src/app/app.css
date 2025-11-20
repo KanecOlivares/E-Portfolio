@@ -44,9 +44,9 @@ app-header {
 
   .col-right {
     min-width: 0;
-    padding-left: 1.5rem; /* small offset for spacing */
+    height: calc(92dvh - 2rem);
     border: 5px solid rgba(0, 252, 210, 0.946);
-    margin-top: 6rem;   /* adjust value as needed */
+    margin-top: 4.4rem;   /* adjust value as needed */
     border-radius: 0;
     position: static;
   }
