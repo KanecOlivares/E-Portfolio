@@ -1,0 +1,13 @@
+
+.layout {
+    border: 2px solid rgba(255, 0, 208, 0.756); /* light translucent line */
+    border-radius: 12px; /* optional */
+  }
+
+.top {
+    flex: 2; /* takes 50% if bottom also flex:1 */
+}
+  
+.bottom {
+    flex: 1;
+}

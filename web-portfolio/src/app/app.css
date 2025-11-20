@@ -1,48 +1,68 @@
 :host {
     display: block;
     min-height: 100dvh; /* full viewport height, dynamic units handle mobile UI chrome */
-  }
-  
-  /* Make header visually stick and separate content */
-  app-header {
+    }
+
+/* Make header visually stick and separate content */
+app-header {
     position: sticky;
     top: 0;
     z-index: 100;
     display: block;
     background: #fff;
     border-bottom: 1px solid #eee;
-  }
-  
-  /* Two-column layout container */
-  .layout {
+    }
+
+/* Two-column layout container */
+.layout {
     display: grid;
     grid-template-columns: 320px 1fr; /* left fixed, right fluid */
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 1rem auto;
-    padding: 80px 1rem 0;
-    /* padding: 0 1rem; */
-  }
-  
-  /* Optional column styling */
-  .col-left {
-    align-self: start;
-  }
+    gap: 4.0rem;
+
+    width: min(100%, 1800px);
+    margin: 1.5rem auto;
+
+    min-height: calc(100dvh - 2rem);
+
+    /* margin: 1rem 0 1rem 1rem;   was: 1rem auto;  -> no auto-centering */
+    padding-left: 0;            /* remove left padding */
+
+    border: 3px solid rgba(223, 252, 0, 0.999); /* the border */
+    border-radius: 16px;                      /* optional rounded corners */
+}
+
+
+.col-left {
+    display: flex;              /* turn the column into a flex container */
+    align-items: flex-start;        /* horizontal centering (since column is vertical) */
+    justify-content: flex-start;    /* keep card toward the left edge */
+    padding-top: 8rem;
+    padding-right: 8rem;
+    min-height: calc(100dvh - var(--header-h) - 2rem)
+}
+
+
   .col-right {
-    min-width: 0; /* prevents overflow when content is wide */
+    min-width: 0;
+    padding-left: 1.5rem; /* small offset for spacing */
+    border: 5px solid rgba(0, 252, 210, 0.946);
+    margin-top: 6rem;   /* adjust value as needed */
+    border-radius: 0;
+    position: static;
   }
   
-  /* Responsive: collapse to one column */
-  @media (max-width: 900px) {
+  
+
+/* Responsive: collapse to one column */
+@media (max-width: 900px) {
     .layout {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     /* Show main content first on mobile */
     .col-right {
-      order: 1;
+        order: 1;
     }
     .col-left {
-      order: 2;
+        order: 2;
     }
-  }
-  
+}
